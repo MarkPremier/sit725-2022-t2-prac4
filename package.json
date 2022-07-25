@@ -1,6 +1,27 @@
 {
   "dependencies": {
     "body-parser": "^1.20.0",
-    "express": "^4.18.1"
-  }
+    "express": "^4.18.1",
+    "save": "^2.5.0"
+  },
+  "name": "sit725-2022-t2-prac2",
+  "description": "Tasks from Prac 2 of SIT725\r A simple calcualtor using Express and GET functions",
+  "version": "1.0.0",
+  "main": "scripts.js",
+  "scripts": {
+    "start": "node scripts.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarkPremier/sit725-2022-t2-prac2.git"
+  },
+  "keywords": [
+    "express"
+  ],
+  "author": "Mark",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarkPremier/sit725-2022-t2-prac2/issues"
+  },
+  "homepage": "https://github.com/MarkPremier/sit725-2022-t2-prac2#readme"
 }
