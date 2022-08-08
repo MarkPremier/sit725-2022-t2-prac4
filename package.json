@@ -25,6 +25,8 @@
   },
   "homepage": "https://github.com/MarkPremier/sit725-2021-t2-prac4#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongodb": "^4.8.1"
   }
 }

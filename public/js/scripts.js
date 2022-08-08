@@ -12,9 +12,7 @@ const cardList = [
         desciption: "Demo desciption about kitten 3"
     }
 ]
-const clickMe = () => {
-    alert("Thanks for clicking me. Hope you have a nice day!")
-}
+
 
 const getProjects = () => {
     $.get('/api/projects',(response) => {
@@ -27,12 +25,13 @@ const getProjects = () => {
 
 const submitForm = () => {
     let formData = {};
-    formData.first_name = $('#first_name').val();
-    formData.last_name = $('#last_name').val();
-    formData.password = $('#password').val();
-    formData.email = $('#email').val();
+    formData.title = $('#first_name').val();
+    formData.image = $('#last_name').val();
+    formData.link = $('#password').val();
+    formData.description = $('#email').val();
 
     console.log("Form Data Submitted: ", formData);
+    addProjectToApp(formData);
 }
 
 const addCards = (items) => {
@@ -47,6 +46,18 @@ const addCards = (items) => {
       '</div></div></div>';
       $("#card-section").append(itemToAppend)
     });
+}
+
+const addProjectToApp = (project) => {
+    $.ajax({
+        url: '/api/projects',
+        data: project,
+        type: 'POST',
+        success: (result) => {
+            alert(result.message);
+            location.reload();
+        }
+    })
 }
 
 
