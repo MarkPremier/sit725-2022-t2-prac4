@@ -16,6 +16,15 @@ const clickMe = () => {
     alert("Thanks for clicking me. Hope you have a nice day!")
 }
 
+const getProjects = () => {
+    $.get('/api/projects',(response) => {
+        if(response.statusCode==200){
+            addCards(response.data);
+        }
+    })
+}
+
+
 const submitForm = () => {
     let formData = {};
     formData.first_name = $('#first_name').val();
@@ -47,6 +56,7 @@ $(document).ready(function(){
     $('#formSubmit').click(()=>{
         submitForm();
     })
-    addCards(cardList);
+    getProjects();
     $('.modal').modal();
   });
+
